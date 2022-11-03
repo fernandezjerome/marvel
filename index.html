@@ -26,7 +26,11 @@
                 <ul class="characters">
                     <!-- hero thumb component goes here -->
                     <!-- <theherothumb> </theherothumb> -->
-                    <theherothumb v-for="hero in heroData" :hero="hero">
+                    <theherothumb
+                        @loadlbdata="loadLightbox"
+                        v-for="hero in heroData"
+                        :hero="hero"
+                    >
                     </theherothumb>
                 </ul>
             </nav>
@@ -38,6 +42,7 @@
                     Marvel character
                 </p>
             </article>
+            <thelightbox></thelightbox>
         </main>
         <!-- make this a sticky footer so it's always at the bottom-->
         <footer class="sticky_footer">
@@ -45,7 +50,6 @@
         </footer>
 
         <!-- lightbox component goes here -->
-
         <!-- end lightbox component -->
 
         <!-- load script tags at the bottom -->
